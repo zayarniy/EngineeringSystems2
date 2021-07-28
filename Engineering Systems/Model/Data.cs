@@ -37,9 +37,9 @@ namespace Engineering_Systems
             BoilerPipe.Add(new Data("Пайка медью", 100));
             BoilerPipe.Add(new Data("Прес металл", 150));
 
-            Flors.Add(new Data("1", 100));
-            Flors.Add(new Data("2", 200));
-            Flors.Add(new Data("3", 300));
+            Flors.Add(new Data("1", 1));
+            Flors.Add(new Data("2", 2));
+            Flors.Add(new Data("3", 3));
 
             HeatMethod.Add(new Data("Радиаторы", 100));
             HeatMethod.Add(new Data("Теплый пол", 200));

@@ -26,7 +26,7 @@
         </Menu>
         <Slider Grid.Row=" 1" HorizontalAlignment="Left" Margin="8,27,0,0" VerticalAlignment="Top" Width="312" Height="18" Maximum="500" Minimum="60" ValueChanged="Slider_ValueChanged"/>
         <TextBlock Grid.Row=" 1" HorizontalAlignment="Left" Margin="7,53,0,0" Text="Количество этажей" TextWrapping="Wrap" VerticalAlignment="Top" Width="135"  Height="22"/>
-        <ComboBox x:Name="cbFloors" Grid.Row=" 1" HorizontalAlignment="Left" Margin="151,53,0,0" VerticalAlignment="Top" Width="169" Height="22" ItemsSource="{Binding Flors}" DisplayMemberPath="Nomenc">
+        <ComboBox SelectedItem="{Binding SelectedFloor}" x:Name="cbFloors" Grid.Row=" 1" HorizontalAlignment="Left" Margin="151,53,0,0" VerticalAlignment="Top" Width="169" Height="22" ItemsSource="{Binding Flors}" DisplayMemberPath="Nomenc">
         </ComboBox>
         <TextBlock Grid.Row=" 1" HorizontalAlignment="Left" Margin="8,80,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Height="22" Width="135"><Run Language="ru-ru" Text="Количество окон"/></TextBlock>
         <TextBlock Grid.Row=" 1" HorizontalAlignment="Left" Margin="9,9,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="140" Height="16"><Run Language="ru-ru" Text="Площадь"/></TextBlock>
@@ -36,13 +36,13 @@
         <ComboBox x:Name="cbHeatMethod" Grid.Row="1" HorizontalAlignment="Left" Margin="151,134,0,0" VerticalAlignment="Top" Width="169" Height="22" ItemsSource="{Binding HeatMethod}" DisplayMemberPath="Nomenc">
         </ComboBox>
         <TextBlock Grid.Row="1" HorizontalAlignment="Left" Margin="7,108,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Height="20" Width="134"><Run Language="ru-ru" Text="Котёл"/></TextBlock>
-        <ComboBox x:Name="cbBoiler" ItemsSource="{Binding Boilers}" Grid.Row="1" HorizontalAlignment="Left" Margin="151,107,0,0" VerticalAlignment="Top" Width="169" Height="22" DisplayMemberPath="Nomenc"/>
+        <ComboBox  SelectedItem="{Binding SelectedBoiler}" x:Name="cbBoiler" ItemsSource="{Binding Boilers,Mode=TwoWay}" Grid.Row="1" HorizontalAlignment="Left" Margin="151,107,0,0" VerticalAlignment="Top" Width="169" Height="22" DisplayMemberPath="Nomenc"/>
         <TextBlock Grid.Row="1" HorizontalAlignment="Left" Margin="8,162,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Height="20" Width="136"><Run Language="ru-ru" Text="Бойлер"/></TextBlock>
         <ComboBox x:Name="cbWaterHeat" Grid.Row="1" HorizontalAlignment="Left" Margin="151,161,0,0" VerticalAlignment="Top" Width="169" Height="22" ItemsSource="{Binding WaterHeats}" DisplayMemberPath="Nomenc"/>
         <TextBlock x:Name="cbBoilerPip" Grid.Row="1" HorizontalAlignment="Left" Margin="5,192,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Height="20" Width="136"><Run Language="ru-ru" Text="Обвязка котельной"/></TextBlock>
         <ComboBox x:Name="cbBoilerPipe" Grid.Row="1" HorizontalAlignment="Left" Margin="151,190,0,0" VerticalAlignment="Top" Width="169" Height="22" ItemsSource="{Binding BoilerPipe}" DisplayMemberPath="Nomenc"/>
         <Button x:Name="btCalculate" Content="Расччитать" HorizontalAlignment="Left" Margin="257,80,0,0" Grid.Row="2" VerticalAlignment="Top"/>
         <Button x:Name="btReset" Content="Сброс" HorizontalAlignment="Left" Margin="214,80,0,0" Grid.Row="2" VerticalAlignment="Top"/>
-        <TextBlock HorizontalAlignment="Left" Margin="10,10,0,30" Grid.Row="2" TextWrapping="Wrap" Width="312"><Run Language="ru-ru" Text="Результат"/></TextBlock>
+        <TextBlock  HorizontalAlignment="Left" Margin="10,10,0,30" Grid.Row="2" TextWrapping="Wrap" Width="312"><Run Language="ru-ru" Text="{Binding Result}"/></TextBlock>
     </Grid>
 </Window>
